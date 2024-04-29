@@ -78,7 +78,7 @@ public class Main {
     private static String convertAtoB(String CoinA, String CoinB, double amount) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://v6.exchangerate-api.com/v6/fefb38155edd24cfd9418598/pair/" + CoinA + "/" + CoinB + "/" + amount))
+                .uri(URI.create("https://v6.exchangerate-api.com/v6/YOUR_API_KEY/pair/" + CoinA + "/" + CoinB + "/" + amount))
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
